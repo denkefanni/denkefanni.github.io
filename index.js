@@ -26,11 +26,15 @@ $(document).ready(function () {
                 }
                 if ($('#inputGroupSelect01').val() == 'Number') {
                     valuetype = 'Cost'
+                    marginText='Margin in %'
                     var x = Number($('#price').val())
                     var y = Number($('#margin').val())
                     result = x-y
+                    marginpercent=y/x*100
                     $('#valuetype').text(valuetype)
                     $('#result').text(result)
+                    $('#marginText').text(marginText)
+                    $('#marginpercent').text(marginpercent)
                 }
             }
             if ($('#margin').val() == '') {
@@ -50,11 +54,15 @@ $(document).ready(function () {
                 }
                 if ($('#inputGroupSelect01').val() == 'Number') {
                     valuetype = 'Price'
+                    marginText='Margin in %'
                     var x = Number($('#cost').val())
                     var y = Number($('#margin').val())
                     result = x+y
+                    marginpercent=y/result*100
                     $('#valuetype').text(valuetype)
                     $('#result').text(result)
+                    $('#marginText').text(marginText)
+                    $('#marginpercent').text(marginpercent)
                 }
             }
         }

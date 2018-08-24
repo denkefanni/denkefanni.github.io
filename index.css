@@ -1,6 +1,6 @@
 .calculator{
     background-color: gray;
-    height: 50vh;
+    height: 60vh;
     text-align: center;
     margin: 5vh;
     padding: 2vh;
@@ -9,4 +9,7 @@
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+}
+#result{
+
 }
