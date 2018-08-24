@@ -17,6 +17,7 @@ $(document).ready(function () {
         }
         if (emptycount == 1) {
             if ($('#cost').val() == '') {
+                var result
                 if ($('#inputGroupSelect01').val() == 'Percentage') {
                     valuetype = 'Cost'
                     result = $('#price').val() * (1 - $('#margin').val() / 100)
@@ -33,12 +34,14 @@ $(document).ready(function () {
                 }
             }
             if ($('#margin').val() == '') {
+                var result
                 valuetype = 'Margin'
                 result = (1 - $('#cost').val() / ($('#price').val())) * 100
                 $('#valuetype').text(valuetype)
                 $('#result').text(result + '%')
             }
             if ($('#price').val() == '') {
+                var result
                 if ($('#inputGroupSelect01').val() == 'Percentage') {
                     valuetype = 'Price'
                     result = $('#cost').val() / (1 - $('#margin').val() / 100)
